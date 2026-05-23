@@ -1,7 +1,7 @@
 import { Canvas } from '@react-three/fiber';
 import { KeyboardControls } from '@react-three/drei';
 import { Physics } from '@react-three/rapier';
-import { Vehicle } from './Vehicle';
+import { AmmoVehicle } from './AmmoVehicle';
 import { World } from './World';
 import { Track } from './Track';
 import { HUD } from './HUD';
@@ -23,7 +23,7 @@ export default function App() {
       <KeyboardControls map={map}>
         <Canvas shadows camera={{ fov: 60 }}>
           <Physics gravity={[0, -9.81, 0]}>
-            <Vehicle />
+            <AmmoVehicle />
             <Track />
             <World />
             <DriftCam />
